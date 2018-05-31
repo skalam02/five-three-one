@@ -6,11 +6,6 @@ var fto = require('./views/531.js')
 app.use(bodyParser.urlencoded({extended: true}))
 app.set("view engine", "ejs")
 
-
-app.listen(3000,'localhost', function() {
-  console.log("server started");
-})
-
 app.get('/', function(req,res) {
   res.render('oneRepInput');
 })
@@ -27,4 +22,8 @@ app.post('/', function(req,res) {
     console.log(week)
   })
   res.render('fivethreeone', {month:month})
+})
+
+app.listen(process.env.PORT, function() {
+  console.log("server started");
 })
