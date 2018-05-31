@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <style media="screen">
+      body {
+        padding-top: 50px;
+      }
+      table {
+        margin: auto;
+      }
+    </style>
+  </head>
+  <body>
+    <div style="margin: 0 auto;">
+    <% for(var i = 0;i<4;i++) { %>
+      <table border="1">
+        <tr>
+          <th><h3>Week <%=i+1%></h3></th>
+          <th><h3>Day 1</h3></th>
+          <th><h3>Day 2</h3></th>
+          <th><h3>Day 3</h3></th>
+          <th><h3>Day 4</h3></th>
+        </tr>
+        <td></td>
+        <td>
+          <strong><%= month[i].day1.name %></strong><br>
+          <%= month[i].day1.firstSet %><br>
+          <%= month[i].day1.secondSet %><br>
+          <%= month[i].day1.thirdSet %>
+        </td>
+        <td>
+          <strong><%= month[i].day2.name %></strong><br>
+          <%= month[i].day2.firstSet %><br>
+          <%= month[i].day2.secondSet %><br>
+          <%= month[i].day2.thirdSet %>
+        </td>
+        <td>
+          <strong><%= month[i].day3.name %></strong><br>
+          <%= month[i].day3.firstSet %><br>
+          <%= month[i].day3.secondSet %><br>
+          <%= month[i].day3.thirdSet %>
+        </td>
+        <td>
+          <strong><%= month[i].day4.name %></strong><br>
+          <%= month[i].day4.firstSet %><br>
+          <%= month[i].day4.secondSet %><br>
+          <%= month[i].day4.thirdSet %>
+        </td>
+      </table>
+      <% } %>
+      </div>
+  </body>
+</html>
